@@ -3,6 +3,8 @@
 // Licenced under MIT license. See LICENSE.txt for details.
 ///////////////////////////////////////////////////////////////////////////////
 
+#if CPPCORO_OS_WINNT
+
 #include <cppcoro/detail/win32.hpp>
 
 #ifndef WIN32_LEAN_AND_MEAN
@@ -18,3 +20,5 @@ void cppcoro::detail::win32::safe_handle::close() noexcept
 		m_handle = nullptr;
 	}
 }
+
+#endif

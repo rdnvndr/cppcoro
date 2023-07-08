@@ -7,9 +7,7 @@
 
 #include <cppcoro/config.hpp>
 
-#if !CPPCORO_OS_WINNT
-# error <cppcoro/detail/win32.hpp> is only supported on the Windows platform.
-#endif
+#if CPPCORO_OS_WINNT
 
 #include <utility>
 #include <cstdint>
@@ -176,4 +174,5 @@ namespace cppcoro
 	}
 }
 
+#endif
 #endif
